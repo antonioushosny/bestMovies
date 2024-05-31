@@ -7,11 +7,11 @@ it's a small project for store movies in db and include apis for show , store , 
 1. [Project Structure](#project-structure)
 2. [Setup Process](#setup-process)
 3. [Prerequisites](#prerequisites)
-4. [Usage](#usage)
-5. [Contributing](#contributing)
-6. [License](#license)
+4. [Using Docker](#using-docker)
+ 
 
-## Project Structure
+#project-structure
+```plaintext
 .
 ├── app/                # Application logic
 ├── config/             # Configuration files
@@ -25,3 +25,38 @@ it's a small project for store movies in db and include apis for show , store , 
 ├── docker-compose.yml  # Docker Compose configuration
 ├── .env.example        # Example environment configuration
 └── README.md           # Project documentation
+
+```
+
+## Setup Process
+
+### Clone the Repository
+    git clone https://github.com/antonioushosny/bestMovies.git
+    cd bestMovies
+
+### Environment Variables
+    cp .env.example .env
+
+### Install Dependencies
+    composer install
+
+### Generate Application Key
+    php artisan key:generate
+
+### Run Migrations and Seeders
+    php artisan migrate
+    php artisan migrate --seed
+
+### Start the Application
+    php artisan serve
+### Running Tests
+    php artisan test
+    php artisan test --coverage-html=coverage   
+
+# Note: if you use Docker you can run php cmmand as "docker-compose exec app php" instead of "php"
+## Prerequisites
+    - PHP >= 8.0
+    - Composer
+    - Docker (optional, for containerized setup)
+
+
