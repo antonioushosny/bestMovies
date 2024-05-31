@@ -7,10 +7,8 @@ it's a small project for store movies in db and include apis for show , store , 
 1. [Project Structure](#project-structure)
 2. [Setup Process](#setup-process)
 3. [Prerequisites](#prerequisites)
-4. [Using Docker](#using-docker)
  
-
-#project-structure
+# Project Structure
 ```plaintext
 .
 ├── app/                # Application logic
